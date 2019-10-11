@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Topic English</title>
+    <style type="text/css">
+        .container {
+            width: auto;
+            height: auto;
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: 0px;
+        }
+        
+        .page {
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: 0px;
+        }
+        
+        .top {
+            width: auto;
+            height: 250px;
+            background-image: url("picture/img2.png");
+            margin-left: 250px;
+            margin-top: 20px;
+            background-repeat: no-repeat;
+            background-size: 600px 250px;
+        }
+        
+        .top img {
+            position: absolute;
+            text-align: left;
+            margin-top: 20px;
+            margin-left: 50px;
+        }
+        
+        .menubar {
+            width: auto;
+            height: 40px;
+            background-color: #ffc107;
+        }
+        
+        .menubar ul {
+            list-style-type: none;
+            text-align: center;
+        }
+        
+        .menubar li {
+            display: inline-block;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            margin-left: -5px;
+        }
+        
+        .menubar a {
+            text-decoration: none;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+            color: white;
+        }
+        
+        .menubar a:hover {
+            color: lawngreen;
+            text-decoration: none;
+        }
+        
+        .menubar li:hover {
+            background-color: coral;
+        }
+        
+        .content {
+            width: auto;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .content-detail {
+            border-style: solid;
+            border-width: 5px;
+            border-color: #ffc107;
+            background-color: white;
+            text-align: center;
+            margin-left: 280px;
+            margin-right: 280px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .content-detail h1 {
+            font-family: Verdana;
+            font-weight: bold;
+            font-size: 65px;
+            text-align: center;
+            color: crimson;
+        }
+        
+        .content1 {
+            background-image: url("picture/img5.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 500px 660px;
+            height: 680px;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .content1 button {
+            margin-top: 350px;
+        }
+        
+        .btn {
+            width: 150px;
+            position: relative;
+            top: 260px;
+            left: -170px;
+        }
+        
+        .content2 {
+            height: 680px;
+            align-items: center;
+            justify-content: center;
+            border-top: 1px solid gray;
+            /* border-style: solid;
+            border-width: 5px; */
+            /* border-color: green; */
+        }
+        
+        .next {
+            align-items: center;
+            float: right;
+        }
+        
+        .back {
+            align-items: center;
+            float: left;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="page">
+            <div class="top">
+                <!-- <img src="picture/logo.png"> -->
+
+            </div>
+            <div class="menubar">
+                <ul>
+                    <li><a href="#">a</a></li>
+                    <li><a href="#">b</a></li>
+                    <li><a href="#">c</a></li>
+                    <li><a href="#">d</a></li>
+                    <li><a href="#">e</a></li>
+                    <li><a href="#">f</a></li>
+                    <li><a href="#">g</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="content-detail">
+                    <h1>Spelling</h1>
+                    <div class="content1" id="1">
+                        <button type="button" class="btn btn-success btn-lg" onclick="Start()">Start</button>
+                    </div>
+                    <div class="content2" id="2">
+                        <button type="button" class="btn btn-outline-secondary">Level 1</button>
+                        <button type="button" class="btn btn-outline-secondary">Level 2</button>
+                        <button type="button" class="btn btn-outline-secondary">Level 3</button>
+                        <button type="button" class="btn btn-outline-danger">Stop</button>
+
+                        <div class="next">
+                            <button type="button" class="btn btn-outline-secondary" aria-placeholder=">"></button>
+                        </div>
+                        <div class="back">
+                            <button type="button" class="btn btn-outline-secondary" aria-placeholder="<"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("2").style.display = 'none';
+
+        function Start() {
+            document.getElementById("1").style.display = 'none';
+            document.getElementById("2").style.display = 'block';
+        };
+    </script>
+</body>
+
+</html>
